@@ -1,4 +1,6 @@
-@use "../base/variables" as var;
+body {
+  font-family: "Inter", sans-serif;
+}
 
 .hero-name-text {
   font-size: 96px;
@@ -15,4 +17,4 @@
   font-weight: 900;
   margin: 0;
   line-height: normal;
-}
+}/*# sourceMappingURL=main.css.map */
