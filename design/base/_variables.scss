@@ -1,0 +1,14 @@
+$primary-color-1: linear-gradient(90deg, #ffae00 0%, #ca590e 100%);
+$primary-color-2: linear-gradient(90deg, #3d26ef 0%, #a605d3 100%);
+$header-color-active: #e39206;
+$header-color-hover: #4229e8;
+$font-primary: "Inter", sans-serif;
+$background-color: #161616;
+$header-color: #131313;
+
+body {
+  font-family: $font-primary;
+  color: white;
+  background-color: $background-color;
+  margin: 0;
+}

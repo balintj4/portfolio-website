@@ -3,9 +3,48 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Bálint's portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="design/main.css" />
   </head>
   <body>
-    <h1>Portfolio website</h1>
+    <header class="floating-header">
+      <nav aria-label="Hlavná navigácia">
+        <ul class="nav-list">
+          <li><a href="#home" class="nav-link is-active">Home</a></li>
+          <li><a href="#about" class="nav-link">About Me</a></li>
+          <li><a href="#resume" class="nav-link">Resume</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section class="hero-section">
+      <div class="hero-left">
+        <div class="hero-name-group">
+          <h2 class="hero-name-text">Bálint</h2>
+          <h1 class="hero-surname-text">Janik</h1>
+          <h3 class="hero-regular-text">Software developer</h3>
+        </div>
+        <div class="hero-footer">
+          <div class="hero-buttons">
+            <a class="button-regular button" href="">About Me</a>
+            <a class="button-active-1 button" href="">My Resume</a>
+          </div>
+          <div class="socials-icons">
+            <svg></svg>
+            <svg></svg>
+            <svg></svg>
+            <svg></svg>
+            <svg></svg>
+          </div>
+        </div>
+      </div>
+      <div class="hero-right"></div>
+    </section>
   </body>
 </html>

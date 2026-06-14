@@ -1,0 +1,38 @@
+.hero-section {
+  display: flex;
+  flex-direction: row;
+  height: 100dvh;
+}
+.hero-left {
+  position: relative;
+  display: flex;
+
+  flex: 0 0 35%;
+  max-height: inherit;
+  padding: clamp(4rem, 12vw, 16rem) 4rem 4rem 8rem;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-shrink: 0;
+  align-self: stretch;
+}
+
+.hero-right {
+  height: inherit;
+  flex: 0 0 65%;
+  background-image: url("../../assets/hero-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: 30%;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.hero-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
