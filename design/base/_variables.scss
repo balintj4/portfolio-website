@@ -1,9 +1,11 @@
 $primary-color-1: linear-gradient(90deg, #ffae00 0%, #ca590e 100%);
 $primary-color-2: linear-gradient(90deg, #3d26ef 0%, #a605d3 100%);
 $font-primary: "Inter", sans-serif;
+$background-color: #161616;
 
 body {
   font-family: $font-primary;
   color: white;
-  background-color: #161616;
+  background-color: $background-color;
+  margin: 0;
 }
