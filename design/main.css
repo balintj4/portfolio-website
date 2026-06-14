@@ -6,7 +6,7 @@ body {
 }
 
 .hero-name-text {
-  font-size: 6rem;
+  font-size: clamp(3rem, 4vw + 1rem, 12rem);
   font-style: normal;
   font-weight: 200;
   line-height: normal;
@@ -15,15 +15,15 @@ body {
 
 .hero-surname-text {
   text-transform: uppercase;
-  font-size: 8rem;
+  font-size: clamp(4rem, 5vw + 2.5rem, 16rem);
   font-style: normal;
   font-weight: 900;
-  margin: 0 0 4rem 0;
+  margin: -1.5rem 0 4rem 0;
   line-height: normal;
 }
 
 .hero-regular-text {
-  font-size: 3rem;
+  font-size: clamp(1rem, 1vw + 1rem, 6rem);
   font-style: normal;
   font-weight: 400;
   margin: 0 0 2rem 0;
@@ -44,19 +44,29 @@ a:hover {
   align-items: center;
   align-self: center;
   text-align: center;
+  font-size: clamp(1rem, 0.25vw + 0.85rem, 4rem);
+  font-weight: 600;
   border-radius: 50px;
 }
 
 .button-regular {
-  width: 8rem;
+  width: clamp(4rem, 5vw + 2.5rem, 16rem);
   padding: 1rem 2rem;
-  border: 4px solid var(--white, #fff);
+  box-shadow: inset 0 0 0 2px #ffffff;
+  border-block: none;
+}
+.button-regular:hover {
+  box-shadow: inset 0 0 0 2px #e39206;
 }
 
 .button-active-1 {
-  width: 8rem;
+  width: clamp(4rem, 5vw + 2.5rem, 16rem);
   padding: 1rem 2rem;
   background: linear-gradient(90deg, #ffae00 0%, #ca590e 100%);
+  transition: color 0.3s ease;
+}
+.button-active-1:hover {
+  background: linear-gradient(90deg, #3d26ef 0%, #a605d3 100%);
 }
 
 .hero-left {
@@ -64,10 +74,42 @@ a:hover {
   background-repeat: no-repeat;
 }
 
+.floating-header {
+  position: fixed;
+  top: clamp(1rem, 2vw, 2rem);
+  width: 90%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 20;
+  background-color: #131313;
+  border-radius: 8px;
+  padding: 2rem 4rem;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  font-size: clamp(1rem, 0.2vw + 1rem, 8rem);
+  text-transform: capitalize;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+.nav-link:hover, .nav-link.is-active {
+  color: #e39206;
+}
+
 .hero-section {
   display: flex;
   flex-direction: row;
-  max-height: 100dvh;
+  height: 100dvh;
 }
 
 .hero-left {
@@ -75,7 +117,7 @@ a:hover {
   display: flex;
   flex: 0 0 35%;
   max-height: inherit;
-  padding: 12rem 4rem 4rem 8rem;
+  padding: clamp(4rem, 12vw, 16rem) 4rem 4rem 8rem;
   flex-direction: column;
   align-items: flex-start;
   flex-shrink: 0;
