@@ -9,7 +9,7 @@
 
   flex: 0 0 35%;
   max-height: inherit;
-  padding: clamp(4rem, 12vw, 16rem) 4rem 4rem 8rem;
+  padding: clamp(4rem, 12vw, 16rem) 4rem clamp(2rem, 3vw + 1rem, 12rem) 8rem;
   flex-direction: column;
   align-items: flex-start;
   flex-shrink: 0;
@@ -35,4 +35,13 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: flex-start;
+  flex: 1 0 0;
+  align-self: stretch;
+}
+
+.socials-icons {
+  display: flex;
+  flex-direction: row;
+  gap: clamp(2rem, 0.5vw + 1rem, 6rem);
 }
