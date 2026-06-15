@@ -5,6 +5,15 @@ body {
   margin: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
 .hero-name-text {
   font-size: clamp(3rem, 4vw + 1rem, 12rem);
   font-style: normal;
@@ -27,6 +36,15 @@ body {
   font-style: normal;
   font-weight: 400;
   margin: 0 0 2rem 0;
+  line-height: normal;
+}
+
+.lang-name {
+  font-size: clamp(2rem, 2vw + 2rem, 12rem);
+  font-style: normal;
+  font-weight: 900;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.4);
   line-height: normal;
 }
 
@@ -78,6 +96,10 @@ a:hover {
   width: clamp(2rem, 1.5vw + 1rem, 16rem);
 }
 
+.lang-img {
+  width: clamp(3rem, 3.5vw + 2rem, 24rem);
+}
+
 .floating-header {
   position: fixed;
   top: clamp(1rem, 2vw, 2rem);
@@ -110,10 +132,45 @@ a:hover {
   color: #e39206;
 }
 
+.lang-single {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.8vw;
+}
+
+.lang-carousel {
+  padding: 3rem 6rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.lang-showcase {
+  display: flex;
+  width: -moz-max-content;
+  width: max-content;
+  animation: scroll-infinite 60s linear infinite;
+  will-change: transform;
+}
+
+.lang-items {
+  display: flex;
+  flex-direction: row;
+  gap: 4.8vw;
+  padding-inline-end: 4.8rem;
+  list-style: none;
+}
+
+@keyframes scroll-infinite {
+  100% {
+    transform: translateX(-50%);
+  }
+}
 .hero-section {
   display: flex;
   flex-direction: row;
   height: 100dvh;
+  overflow: hidden;
 }
 
 .hero-left {
