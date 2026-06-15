@@ -25,6 +25,15 @@
   line-height: normal;
 }
 
+.lang-name {
+  font-size: clamp(2rem, 2vw + 2rem, 12rem);
+  font-style: normal;
+  font-weight: 900;
+  margin: 0;
+  color: rgb(255, 255, 255, 0.4);
+  line-height: normal;
+}
+
 a {
   text-decoration: none;
   color: inherit;
