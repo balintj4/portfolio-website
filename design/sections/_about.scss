@@ -1,0 +1,79 @@
+.about-heading {
+  grid-area: title;
+}
+.about-top {
+  grid-area: text1;
+  max-width: 65ch;
+}
+.about-portrait {
+  grid-area: image;
+}
+.about-bottom {
+  grid-area: text2;
+  max-width: 65ch;
+}
+.about-button {
+  grid-area: button;
+  justify-self: start; /* Zabráni tlačidlu roztiahnuť sa na celú šírku */
+  align-self: start;
+}
+
+.about {
+  padding: 1rem 2rem;
+  @media (min-width: 992px) {
+    padding: 0;
+    padding-top: 12dvh;
+    padding-bottom: 8dvh;
+  }
+}
+
+.about-section {
+  border-radius: 16px;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+
+  grid-template-areas:
+    "title"
+    "text1"
+    "image"
+    "text2"
+    "button";
+
+  @media (min-width: 992px) {
+    grid-template-columns: 4fr 6fr;
+    padding-right: 4rem;
+
+    grid-template-areas:
+      "image title"
+      "image text1"
+      "image text2"
+      "image button";
+
+    align-content: center;
+    grid-template-rows: max-content max-content max-content max-content 1fr;
+  }
+}
+
+.hero-left {
+  display: flex;
+  align-items: flex-end;
+}
+
+.about-portrait {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 100dvh;
+  object-fit: cover;
+
+  @media (min-width: 992px) {
+    width: 120%;
+    max-width: none;
+    margin-left: -10%;
+
+    margin-bottom: -4rem;
+    transform: translateY(1rem);
+  }
+}

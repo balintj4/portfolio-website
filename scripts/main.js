@@ -11,6 +11,7 @@ const sectionObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       const currentId = entry.target.getAttribute("id");
+      console.log(currentId);
       navLinks.forEach((link) => link.classList.remove("is-active"));
 
       const activeLink = document.querySelector(
